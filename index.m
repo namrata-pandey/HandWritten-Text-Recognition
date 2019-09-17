@@ -1,11 +1,11 @@
 close all
 clear
 clc
-addpath(genpath('C:\Users\Sneharun\Desktop\HandWritten-Text-Recognition\testImages'))
+addpath(genpath('C:\Users\NAMRATA PANDEY\Downloads\MatlabCentralUpload\testImages'))
 
 load('network.mat');
 
-imagePath = fullfile('testImages','a.jpg');
+imagePath = fullfile('testImages','baby.jpg');
 originalImage = imread(imagePath);
 
 imshow(originalImage);
