@@ -34,9 +34,6 @@ end
 hold off
 pause (1)
 
-
-
-
 for n=1:Ne
     [r,c] = find(L==n);
     n1 = moddedImage(min(r):max(r),min(c):max(c));
@@ -44,7 +41,7 @@ for n=1:Ne
     n1 = imgaussfilt(double(n1),1);
     n1 = padarray(imresize(n1,[20 20],'bicubic'),[4 4],0,'both');
 
-    fullFileName = fullfile('segmentedImages', sprintf('image%d.png', n));
+    fullFileName = fullfile('segmentedImages', sprintf('image%d.png',n));
     imwrite(n1, fullFileName);
     pause(1)
 end
